@@ -9,7 +9,6 @@
       - profile: debian-stretch
       - profile: ubuntu-focal
       - profile: ubuntu-bionic
-      - profile: ubuntu-xenial
       - profile: centos-7
     test_host_suffixes:
       - stable
