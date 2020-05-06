@@ -5,6 +5,7 @@ netbox_git
 
 [netbox_stable]
 debian-buster-stable
+ubuntu-focal-stable
 ubuntu-bionic-stable
 centos-7-stable
 
@@ -16,5 +17,6 @@ ubuntu-xenial-stable
 
 [netbox_git]
 debian-buster-git
+ubuntu-focal-git
 ubuntu-bionic-git
 centos-7-git
