@@ -6,6 +6,7 @@ netbox_git
 [netbox_stable]
 debian-buster-stable
 ubuntu-bionic-stable
+ubuntu-focal-stable
 centos-7-stable
 
 # The following distributions don't have Python 3.6 in standard repos, so pin
