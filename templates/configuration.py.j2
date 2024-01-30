@@ -92,6 +92,19 @@ REDIS = {
         'INSECURE_SKIP_TLS_VERIFY': {{ netbox_redis_cache_insecure_skip_tls_verify }},
     }
 }
+{% if netbox_ldap_enabled %}
+
+REMOTE_AUTH_BACKEND = 'netbox.authentication.LDAPBackend'
+{% if netbox_ldap_debug|default("False")|bool %}
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {"console": {"class": "logging.StreamHandler"}},
+    "loggers": {"django_auth_ldap": {"level": "DEBUG", "handlers": ["console"]}},
+}
+{% endif %}
+{% endif %}
 
 {% if netbox_metrics_enabled %}
 METRICS_ENABLED = True

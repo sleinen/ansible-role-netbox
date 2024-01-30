@@ -378,6 +378,7 @@ requests log to `req-logger`.
 ----
 netbox_ldap_enabled: false
 netbox_ldap_config_template: netbox_ldap_config.py.j2
+netbox_ldap_debug: false
 ----
 
 Toggle `netbox_ldap_enabled` to `true` to configure LDAP authentication for
@@ -389,6 +390,9 @@ You can find an example in `examples/`. You will also need to set
 TIP: By default, a local (non-LDAP) superuser will still be created by this
 role. If this is undesirable, consider toggling `netbox_superuser_enabled`.
 
+Toggle `netbox_ldap_debug` to `true` if you want LDAP debugging output
+on the console.  Note that this may disable other logging output, so
+please use this only when specifically debugging LDAP authentication.
 [source,yaml]
 ----
 netbox_napalm_enabled: false
