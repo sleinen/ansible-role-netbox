@@ -384,8 +384,7 @@ netbox_ldap_debug: false
 Toggle `netbox_ldap_enabled` to `true` to configure LDAP authentication for
 NetBox. `netbox_ldap_config_template` should be the path to your template - by
 default, Ansible will search your playbook's `templates/` directory for this.
-You can find an example in `examples/`. You will also need to set
-`netbox_config.REMOTE_AUTH_BACKEND` to `netbox.authentication.LDAPBackend`.
+You can find an example in `examples/`.
 
 TIP: By default, a local (non-LDAP) superuser will still be created by this
 role. If this is undesirable, consider toggling `netbox_superuser_enabled`.
